@@ -31,6 +31,7 @@ ValidaCPF.prototype.criaDigito = function(cpfParcial) {
     }, 0);
 
     const digito = 11  - (total % 11);
+    console.log(digito);
     return digito > 9 ? '0' : String(digito);
 };
 
@@ -39,7 +40,7 @@ ValidaCPF.prototype.isSequencia = function() {
     return sequencia === this.cpfLimpo;
 };
 
-const cpf = new ValidaCPF('431.820.506-80');
+const cpf = new ValidaCPF('746.971.314-01');
 
 if (cpf.valida()) {
     console.log('CPF VÁLIDO!');
