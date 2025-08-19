@@ -33,11 +33,12 @@ function isAValidString(convertedStrings) {
     for (i = 0; i < convertedStrings.length; i++) {
         const actualString = convertedStrings[i];
         if (actualString.length > 3) {
+            console.log('O tamanho da nota está errado!');
             return;
-        } else {
-            return true;
-        }
+        } 
     }
+
+    return true;
 }
 
 function amount(val1, val2 , val3, val4, val5) {
@@ -50,15 +51,12 @@ function enemNotes(val1, val2, val3, val4, val5) {
         const amount2 = amount(val1, val2, val3, val4, val5);
         const averageNotes = amount2 / 6;
         return averageNotes.toFixed(2);
-    } else {
-        console.log('ERROR');
     }
     
 }
 
 
-
-console.log(enemNotes(650, 700, 680, 620 , 800));
+console.log(enemNotes(650, 700, 680, 620 , 200));
 
 
 
