@@ -15,7 +15,7 @@ Uma linha com 43 dígitos (linha digitável sem DV).
 */
 
 const generatedNumber = randomDigits(43);
-const totalSum = randomDigitsSum('6573979395700328701820486486321899654411983');
+const totalSum = randomDigitsSum('6573979395700328701820486486321899654411982');
 module11(totalSum);
 
 function randomDigits(digitLength) {
@@ -46,18 +46,19 @@ function randomDigitsSum(randomDigits) {
     let totalSum = 0;
     let weights = 2;
 
-    for(i = 42; i >= 0; i--) {
+    for(let i = 42; i >= 0; i--) {
         let digitNow = Number(randomDigits[i]);
         
         let multiplication = digitNow * weights;
         totalSum += multiplication;
         
+        console.log('Iteração: ', i,'Digito: ', digitNow, 'Peso: ', weights,'Soma Total: ', totalSum);
         if (weights < 9) {
             weights++;
         } else {
             weights = 2;
         }
-        
+
     }
     return totalSum;
 }
